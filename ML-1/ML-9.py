@@ -20,3 +20,7 @@ lm = LinearRegression()
 lm.fit(x_p, y)
 
 print(lm.score(x_p,y))
+print(lm.score(x_p,y))
+print(lm.score(x_p,y))
+print(lm.score(x_p,y))
+print(lm.score(x_p,y))
