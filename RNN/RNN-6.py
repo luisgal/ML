@@ -1,10 +1,12 @@
 import time
-
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 """import pandas as pd"""
 from sklearn import datasets
+
+print(os.path.abspath(os.curdir))
 
 sess = tf.compat.v1.Session()
 iris = datasets.load_iris()
@@ -20,7 +22,8 @@ y_vals = np.array([x[2] for x in iris.data])
 
 plt.clf()
 plt.plot(x_vals, y_vals, 'o', label = "Datos")
-plt.savefig("img/RNN-6/data")
+plt.show()
+plt.savefig("./img/RNN-6/data")
 
 t1 = time.time()
 
@@ -55,4 +58,4 @@ plt.clf()
 plt.plot(x_vals, y_vals, 'bo', label = "Datos")
 plt.plot(x_vals, best_fit, 'r-', label = "Regresión lineal con LU", linewidth = 3)
 plt.legend(loc="upper left")
-plt.savefig("img/RNN-6/sol")
+plt.savefig("./img/RNN-6/sol")

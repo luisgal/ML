@@ -16,7 +16,7 @@ x1_data = tf.placeholder(shape=[None,1], dtype=tf.float32)
 x2_data = tf.placeholder(shape=[None,1], dtype=tf.float32)
 y_target = tf.placeholder(shape=[None,1], dtype=tf.float32)
 
-#Modelo   x_2 = A*x_1 + b  -->  x_2 - A*x_1 - b = 0
+#Modelo   x_1 = A*x_2 + b  -->  x_1 - A*x_2 - b = 0
 A = tf.Variable(tf.random_normal(shape=[1,1]))
 b = tf.Variable(tf.random_normal(shape=[1,1]))
 
